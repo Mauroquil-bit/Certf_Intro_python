@@ -109,38 +109,66 @@ else:
 
 # Path: creditcalc.py
 
-"""
-Wrong answer in test #5
+# Finalmente, 
+# su calculadora de préstamos debe sumar todos los pagos y 
+# restar el capital del préstamo para que obtenga el sobrepago.
 
-Looks like your periods calculations aren't working properly. 
-Correct years and overpayment are [ 2, 52000 ], but you output: ['2']
+# Ejemplo de salida
+# La salida del programa debe tener un formato similar al siguiente ejemplo:
 
-Please find below the output of your program during this failed test.
+# > python creditcalc.py --principal=1000000 --periods=60 --interest=10
+# Your annuity payment = 21248!
+# Overpayment = 274880
 
----
+# > python creditcalc.py --type=diff --principal=1000000 --periods=10 --interest=10
+# Month 1: payment is 108334
+# Month 2: payment is 107500
+# Month 3: payment is 106667
+# Month 4: payment is 105834
+# Month 5: payment is 105000
+# Month 6: payment is 104167
+# Month 7: payment is 103334
+# Month 8: payment is 102500
+# Month 9: payment is 101667
+# Month 10: payment is 100834
 
-Arguments: --type=annuity --principal=500000 --payment=23000 --interest=7.8
+# Overpayment = 45837
 
-You need 2 year to repay this credit!
+# > python creditcalc.py --principal=1000000 --payment=104000 --periods=8 --interest=10
+# Your credit principal = 790499!
+# Overpayment = 696497
 
-"""
+# > python creditcalc.py --type=annuity --principal=500000 --payment=23000 --interest=7.8
+# You need 2 years and 3 months to repay this credit!
+# Overpayment = 52000
 
-# ¿Como resuelvo el siguiente error?
-# Wrong answer in test #5
+# > python creditcalc.py --type=annuity --principal=1000000 --periods=60 --interest=10
+# Your annuity payment = 21248!
+# Overpayment = 274880
 
-# Looks like your periods calculations aren't working properly. 
-# Correct years and overpayment are [ 2, 52000 ], but you output: ['2']
+# > python creditcalc.py --type=annuity --payment=8722 --periods=120 --interest=5.6
+# Your credit principal = 800000!
+# Overpayment = 246622
 
-# Please find below the output of your program during this failed test.
+# > python creditcalc.py --type=annuity --principal=1000000 --payment=104000
+# Incorrect parameters.
 
-# ---
+# > python creditcalc.py --type=diff --principal=1000000 --payment=104000
+# Incorrect parameters.
 
-# Arguments: --type=annuity --principal=500000 --payment=23000 --interest=7.8
+# > python creditcalc.py --type=diff --principal=500000 --periods=8 --interest=7.8
+# Incorrect parameters.
 
-# You need 2 year to repay this credit!
+# > python creditcalc.py --type=annuity --principal=1000000 --periods=60 --payment=10000
+# Incorrect parameters.
 
+# > python creditcalc.py --type=annuity --principal=100000 --periods=60 --interest=10
+# Incorrect parameters.
 
-# Path: creditcalc.py
+# > python creditcalc.py --type=annuity
+# Incorrect parameters.
 
+# > python creditcalc.py --principal=500000 --payment=10000 --periods=8 --interest=7.8
+# Incorrect parameters.
 
 

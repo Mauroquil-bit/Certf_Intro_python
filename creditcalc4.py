@@ -144,7 +144,7 @@ print()
 print(f"Overpayment = {total - args.principal}")
 
 
-    elif args.type == "annuity":
+elif args.type == "annuity":
     
     
     if args.principal is None:

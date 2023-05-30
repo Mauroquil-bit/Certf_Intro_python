@@ -15,21 +15,25 @@ parser.add_argument("--payment", type=int, help="Monthly payment amount")
 args = parser.parse_args()
 
 # calcular el interés mensual
-# interest = args.interest / (12 * 100)
+if args.interest is None:
+    print("Incorrect parameters")
+    
+else:
+    interest = args.interest / (12 * 100)
 
 # calcular el pago diferenciado
 if args.type == "diff":
     if args.principal is None or args.periods is None or args.interest is None:
         print("Incorrect parameters")
     else:
-        interest = args.interest / (12 * 100)
+        #interest = args.interest / (12 * 100)
         total = 0
         for m in range(1, args.periods + 1):
             diff_payment = math.ceil(args.principal / args.periods + interest * (args.principal - args.principal * (m - 1) / args.periods))
             total += diff_payment
             print(f"Month {m}: paid out {diff_payment}")
         print()
-        if total - args.principal >= 0:
+        if total - args.principal > 0:
             print(f"Overpayment = {total - args.principal}")
         else:
             print("Incorrect parameters")
@@ -42,7 +46,7 @@ elif args.type == "annuity":
         annuity_payment = math.ceil(args.principal * (interest * pow(1 + interest, args.periods)) / (pow(1 + interest, args.periods) - 1))
         total = annuity_payment * args.periods
         print(f"Your annuity payment = {annuity_payment}!")
-        if total - args.principal >= 0:
+        if total - args.principal > 0:
             print(f"Overpayment = {total - args.principal}")
         else:
             print("Incorrect parameters")
@@ -52,7 +56,7 @@ elif args.type == "annuity":
         principal = math.floor(args.periods * (annuity_payment / (interest * pow(1 + interest, args.periods) / (pow(1 + interest, args.periods) - 1))))
         total = annuity_payment * args.periods
         print(f"Your credit principal = {principal}!")
-        if total - args.principal >= 0:
+        if total - args.principal > 0:
             print(f"Overpayment = {total - args.principal}")
         else:
             print("Incorrect parameters")
