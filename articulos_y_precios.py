@@ -37,5 +37,14 @@ Milk chocolate: $4
 Doughnut: $2.5
 Pancake: $3.2
 
-
 """
+
+print("Prices:")
+print("Bubblegum: $2")
+print("Toffee: $0.2")
+print("Ice cream: $5")
+print("Milk chocolate: $4")
+print("Doughnut: $2.5")
+print("Pancake: $3.2")
+
+
