@@ -31,29 +31,31 @@ Ejemplo de salida 2:
 MyClass
 """
 
-# my_string = input()
-#
-# new_string = ""
-# for i, c in enumerate(my_string):
-#     if c == "_":
-#         new_string += my_string[i + 1].upper()
-#     elif my_string[i - 1] == "_":
-#         continue
-#     else:
-#         new_string += c
-# print(new_string)
 
 my_string = input()
 
 new_string = ""
-for i, c in enumerate(my_string):
-    if c == "_":
-        new_string += my_string[i + 1].upper()
-    elif my_string[i - 1] == "_":
-        continue
-    else:
-        new_string += c
-print(new_string)
+
+def lower_capitalized(my_string):
+    word_lower = my_string.lower()
+    word_capitalized = word_lower.capitalize()
+    return word_capitalized
+
+
+print(lower_capitalized(my_string))
+
+# ###################################################################
+
+
+# 
+# 
+
+#print(word_capitalized)
+
+
+
+# ###################################################################
+
 
 
 
