@@ -9,13 +9,13 @@ En cuanto a obtener el número de días completos, use la división de piso (). 
 
 """
 
-seconds = [86400, 1028397, 8372891, 219983, 865779330, 3276993204380912]
-# create a list of days here
+seconds = [86400, 1028397, 8372891, 219983, 865779330, 3276993204380912]    # Se define la lista de segundos
 
-days = []
-for s in seconds:
-    days.append(s // (60 * 60 * 24))
-print(days)
+# create a list of days here
+days = []                                                                   # Se define la lista de días
+for s in seconds:                                                           # Se recorre la lista de segundos
+    days.append(s // (60 * 60 * 24))                                        # Se agrega a la lista de días el resultado de la división entera de los segundos entre 60*60*24
+print(days)                                                                 # Se imprime la lista de días
 
 # ###################################################################
 

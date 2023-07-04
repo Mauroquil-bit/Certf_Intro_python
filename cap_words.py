@@ -42,6 +42,7 @@ def lower_capitalized(my_string):
     return word_capitalized
 
 
+
 print(lower_capitalized(my_string))
 
 # ###################################################################

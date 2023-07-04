@@ -16,15 +16,15 @@ pero tenga en cuenta que este cambio no debe ser permanente. [/SUGERENCIA]str.st
 
 """
 
-# the following line reads the list from the input, do not modify it, please
-words = ['apple', 'pear', 'banana', 'Ananas']['apple', 'Ananas']
+words = ['apple', 'pear', 'banana', 'Ananas']
 
-# work with the 'words' list
-
+# work with the variable 'words'
+words_a = []
 for w in words:
     if w.lower().startswith('a'):
         words_a.append(w)
 print(words_a)
+
 
 # ###################################################################
 
